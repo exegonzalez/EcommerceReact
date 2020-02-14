@@ -104,7 +104,7 @@ render() {
                 {/* <img class="img" src="https://http2.mlstatic.com/mate-tipo-camionero-cuero-con-bombilla-pico-de-loro-D_NQ_NP_783229-MLA30185992544_042019-Q.jpg" alt=""/> */}
                 <div class="img-info">
                   <div class="info-inner">
-                    <span class="p-name">{this.props.combo.nombre.substr(1,15)+"..."}</span>
+                    <span class="p-name">{this.props.combo.nombre.substr(0,15)+"..."}</span>
                     
                   </div>
                   <div class="a-size">
