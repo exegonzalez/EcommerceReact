@@ -203,6 +203,7 @@ class App extends Component{
     })
     .then((Response) => {
       const ultCarrito = Response
+      console.log(ultCarrito.data)
       const carritoActual = JSON.parse(localStorage.getItem('carrito'))
       if(carritoActual[0].carrito!==ultCarrito.data[0].carrito){
         localStorage.setItem('linkmercadopago','')
