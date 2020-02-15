@@ -99,7 +99,7 @@ firebase.initializeApp({
           setTimeout(function() {
             localStorage.setItem('usuario',JSON.stringify(this.state.usuario))
               this.props.usuarioLogeado(this.state.usuario)
-          }.bind(this), 3000)
+          }.bind(this), 2000)
       }})
     }
   
