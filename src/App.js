@@ -275,12 +275,6 @@ class App extends Component{
   }
 
   render(){
-    if(Object.keys(this.state.usuario[0]).length === 0){
-      let aux = localStorage.getItem('usuario')
-      this.setState({
-        usuario : JSON.parse(aux)
-      })
-    }
     if(this.state.usuario === null){
       return(
         <Router>
@@ -302,6 +296,89 @@ class App extends Component{
           </Switch> 
         </Router> 
       )
+    }if(Object.keys(this.state.usuario[0]).length === 0){
+      return(
+        <Router>
+          <NavbarNoLogeado/>
+          <Switch>  
+            
+            <Route exact path="/login" render={() => (
+              <Logueo
+                usuarioLogeado={this.usuarioLogeado}
+              />)}/>
+
+            <Route exact path="/" render={() => (
+              <ProductosCliente
+                usuario={this.state.usuario}
+                carrito={this.state.carrito}
+              />
+            )}/>
+
+            {/* Todo lo que estaba abajo es de prueba, despues se quita y se pasa a case 4 */}
+
+            <Route exact path="/ver-producto/:codigo" 
+                render={props => {
+                  const codigoProducto = parseInt(props.match.params.codigo);
+                  return (
+                    <VerProducto
+                      producto = {codigoProducto}
+                      carrito ={this.state.carrito}
+                      usuario = {this.state.usuario}
+
+                    />
+                  )
+                }} />
+
+              <Route exact path="/ver-combo/:codigo" 
+                render={props => {
+                  const codigoCombo = parseInt(props.match.params.codigo);
+                  return (
+                    <VerCombos
+                      combo = {codigoCombo}
+                      carrito ={this.state.carrito}
+                    />
+                  )
+                }} />
+
+            <Route exact path="/ver-comentarios/:codigo" 
+                render={props => {
+                  const codigoProducto = parseInt(props.match.params.codigo);
+                  const comentariosBuscados = this.state.comentarios.filter(comentario => comentario.producto === codigoProducto);
+                  return (
+                    <VerComentarios
+                      comentarios = {comentariosBuscados}
+                      usuario = {this.state.usuario}
+                      producto = {codigoProducto}
+                      
+                    />
+                  )
+                }} />
+
+            <Route exact path="/ver-carrito" render={() => (
+              <VerCarrito                 
+                carrito ={this.state.carrito}
+                usuario ={this.state.usuario}
+              />)}/>
+
+            <Route exact path="/compra" render={() => (
+              <VerCompras
+                usuario={this.state.usuario}
+              />)}/>
+
+            <Route exact path="/ver-lineas-compra/:codigo" 
+                render={props => {
+                  const codigoCompra = parseInt(props.match.params.codigo);
+                  return (
+                    <VerLineasCompra
+                      compra={codigoCompra}
+                    />
+                  )
+                }} />
+
+          </Switch> 
+        </Router> 
+      )
+      
     }else{
 
       switch(this.state.usuario[0].rol){
