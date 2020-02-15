@@ -296,7 +296,7 @@ class App extends Component{
           </Switch> 
         </Router> 
       )
-    }if(Object.keys(this.state.usuario[0]).length === 0){
+    }else if(Object.keys(this.state.usuario[0]).length === 0){
       return(
         <Router>
           <NavbarNoLogeado/>
