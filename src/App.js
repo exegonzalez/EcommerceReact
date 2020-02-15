@@ -275,6 +275,12 @@ class App extends Component{
   }
 
   render(){
+    if(Object.keys(this.state.usuario[0]).length === 0){
+      let aux = localStorage.getItem('usuario')
+      this.setState({
+        usuario : JSON.parse(aux)
+      })
+    }
     if(this.state.usuario === null){
       return(
         <Router>
