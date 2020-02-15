@@ -96,8 +96,8 @@ firebase.initializeApp({
           setTimeout(function() {
               this.buscarUsuario()
             }.bind(this), 2000)
-          localStorage.setItem('usuario',JSON.stringify(this.state.usuario))
           setTimeout(function() {
+            localStorage.setItem('usuario',JSON.stringify(this.state.usuario))
               this.props.usuarioLogeado(this.state.usuario)
           }.bind(this), 3000)
       }})
