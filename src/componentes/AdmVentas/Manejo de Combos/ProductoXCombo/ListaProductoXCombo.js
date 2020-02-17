@@ -5,7 +5,7 @@ import '../Combos.css';
 
 const ListaProductoXCombo = ({productosXCombo, eliminarProductoXCombo}) =>(
     
-  <div>            
+  <div align="center">            
       <br></br>
         <div className="productos">
           <table className="table table-striped table-hover table-condensed">
@@ -19,8 +19,6 @@ const ListaProductoXCombo = ({productosXCombo, eliminarProductoXCombo}) =>(
                 <th scope="col" className="text text-center">Tipo</th> 
                 <th scope="col" className="text text-center">Calificacion</th> 
                 <th scope="col" className="text text-center">StockMin</th> 
-                <th scope="col" className="text text-center"></th> 
-                <th scope="col" className="text text-center"></th> 
                 <th scope="col" className="text text-center"></th> 
                 <th scope="col" className="text text-center"></th> 
                 <th scope="col" className="text text-center"></th> 

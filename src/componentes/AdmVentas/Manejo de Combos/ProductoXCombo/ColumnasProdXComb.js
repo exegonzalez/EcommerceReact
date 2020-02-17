@@ -5,6 +5,8 @@ const ColumnasProdXComb = ({productoXCombo,eliminarProductoXCombo})=> (
     
     <Fragment>         
         <tr>
+            <td></td>
+            <td></td>
             <td>{productoXCombo.codigo}</td>
             <td>{productoXCombo.nombre}</td>
             <td>{productoXCombo.precio}</td>
@@ -13,8 +15,6 @@ const ColumnasProdXComb = ({productoXCombo,eliminarProductoXCombo})=> (
             <td>{productoXCombo.tipo}</td>
             <td>{productoXCombo.calificacion}</td>
             <td>{productoXCombo.stockmin}</td>
-            <td></td>
-            <td></td>
             <td></td>
             <td>
                 <button type="button" className="btn btn-outline-danger"

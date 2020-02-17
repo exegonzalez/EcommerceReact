@@ -5,6 +5,7 @@ const ColumnasAgregarProdXComb = ({producto,AgregarProductoXCombo})=> (
     
     <Fragment>         
         <tr>
+            <td></td>
             <td>{producto.codigo}</td>
             <td>{producto.nombre}</td>
             <td>{producto.precio}</td>
@@ -13,7 +14,6 @@ const ColumnasAgregarProdXComb = ({producto,AgregarProductoXCombo})=> (
             <td>{producto.tipo}</td>
             <td>{producto.calificacion}</td>
             <td>{producto.stockmin}</td>
-            <td></td>
             <td></td>
             <td>
                 <button type="button" className="btn btn-success"
