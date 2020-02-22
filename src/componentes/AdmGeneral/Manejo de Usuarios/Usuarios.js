@@ -14,7 +14,7 @@ class Usuarios extends Component{
     actualizarListado(){
         axios({
           "method" : "GET",
-          "url": "http://localhost:5000/usuario",
+          "url": "https://flask-ecommerce-mate.herokuapp.com/usuario",
         })
         .then((Response) => {
           const listausuarios = Response

@@ -52,7 +52,7 @@ class NuevoProveedor extends Component {
 
     axios({
         "method" : "POST",
-        "url": "http://localhost:5000/proveedor",
+        "url": "https://flask-ecommerce-mate.herokuapp.com/proveedor",
         "params": {
             "cuit": cuit,
             "nombre": nombre,

@@ -64,7 +64,7 @@ function AdministrarUsuarios({usuario}){
 
         axios({
             "method" : "PUT",
-            "url": "http://localhost:5000/usuario",
+            "url": "https://flask-ecommerce-mate.herokuapp.com/usuario",
             "params": {
                 "nombre": user.nombre,
                 "apellido": user.apellido,

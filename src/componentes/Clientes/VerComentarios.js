@@ -16,7 +16,7 @@ class VerComentarios extends Component {
     listadoComentarios(){
         axios({
           "method" : "GET",
-          "url": "http://localhost:5000/comentario",
+          "url": "https://flask-ecommerce-mate.herokuapp.com/comentario",
         })
         .then((Response) => {
           const listaComentarios = Response
@@ -58,7 +58,7 @@ class VerComentarios extends Component {
     
         axios({
             "method" : "POST",
-            "url": "http://localhost:5000/comentario",
+            "url": "https://flask-ecommerce-mate.herokuapp.com/comentario",
             "params": {
                 "contenido": texto,
                 "usuario": this.props.comentarios[0].usuario,

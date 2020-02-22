@@ -16,7 +16,7 @@ class Proveedores extends Component{
     actualizarListado(){
       axios({
         "method" : "GET",
-        "url": "http://localhost:5000/proveedor",
+        "url": "https://flask-ecommerce-mate.herokuapp.com/proveedor",
       })
       .then((Response) => {
         const listaproveedores = Response
@@ -104,7 +104,7 @@ class Proveedores extends Component{
       console.log(cuit);
       axios({
         "method" : "DELETE",
-        "url": "http://localhost:5000/proveedor",
+        "url": "https://flask-ecommerce-mate.herokuapp.com/proveedor",
         "params": {
           "cuit": cuit
         }

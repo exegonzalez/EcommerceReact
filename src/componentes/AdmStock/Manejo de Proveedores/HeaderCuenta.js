@@ -6,14 +6,14 @@ class HeaderCuenta extends Component {
         
         verificarUrl(){
             const url = window.location.href;
-            if(url ==='http://localhost:3000/cuenta'){
+            if(url ==='https://ecommerce-mate.herokuapp.com/cuenta'){
                 return "nav-link active"              
             }         
         }
 
         verificarUrl2(){
             const url = window.location.href;
-            if(url ==='http://localhost:3000/info'){
+            if(url ==='https://ecommerce-mate.herokuapp.com/info'){
                 return "nav-link active"              
             }          
         }

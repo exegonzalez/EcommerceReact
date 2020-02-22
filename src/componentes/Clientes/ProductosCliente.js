@@ -18,7 +18,7 @@ class ProductosCliente extends Component {
       actualizarListado(){
         axios({
           "method" : "GET",
-          "url": "http://localhost:5000/producto",
+          "url": "https://flask-ecommerce-mate.herokuapp.com/producto",
         })
         .then((Response) => {
           const listaproductos = Response
@@ -46,7 +46,7 @@ class ProductosCliente extends Component {
       actualizarListadoCombos(){
         axios({
           "method" : "GET",
-          "url": "http://localhost:5000/combo",
+          "url": "https://flask-ecommerce-mate.herokuapp.com/combo",
         })
         .then((Response) => {
           const listacombos = Response

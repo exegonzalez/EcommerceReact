@@ -13,7 +13,7 @@ class Comentario2 extends Component {
     buscarUsuario(){
         axios({
           "method" : "GET",
-          "url": "http://localhost:5000/cuenta",
+          "url": "https://flask-ecommerce-mate.herokuapp.com/cuenta",
           "params": {
               "email": this.props.comentario.usuario
             }

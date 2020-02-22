@@ -26,7 +26,7 @@ class VerProducto extends Component {
   actualizarListado(){
     axios({
         "method" : "GET",
-        "url": "http://localhost:5000/producto",
+        "url": "https://flask-ecommerce-mate.herokuapp.com/producto",
       })
       .then((Response) => {
       const listaproductos = Response.data
@@ -42,7 +42,7 @@ class VerProducto extends Component {
     agregarAlCarrito= () =>{
       axios({
         "method" : "POST",
-        "url": "http://localhost:5000/linea",
+        "url": "https://flask-ecommerce-mate.herokuapp.com/linea",
         "params": {
             "cantidadproducto": this.state.valor,
             "totalproducto": this.state.producto[0].precio * this.state.valor,
@@ -82,7 +82,7 @@ class VerProducto extends Component {
     Calificar = () =>{
           axios({
             "method" : "POST",
-            "url": "http://localhost:5000/calificacion",
+            "url": "https://flask-ecommerce-mate.herokuapp.com/calificacion",
             "params": {
                 "calificacion":this.state.calificacion,              
                 "producto": this.state.producto[0].codigo,
