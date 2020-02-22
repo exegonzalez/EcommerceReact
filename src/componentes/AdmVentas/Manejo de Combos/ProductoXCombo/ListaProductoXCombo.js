@@ -7,10 +7,12 @@ const ListaProductoXCombo = ({productosXCombo, eliminarProductoXCombo}) =>(
     
   <div align="center">            
       <br></br>
-        <div className="productos">
+        <div className="productos text-black-50">
           <table className="table table-striped table-hover table-condensed">
             <thead className="thead-dark">
               <tr> 
+                <th scope="col" className="text text-center"></th> 
+                <th scope="col" className="text text-center"></th> 
                 <th scope="col"className="text text-center">Codigo</th>
                 <th scope="col" className="text text-center">Nombre</th>
                 <th scope="col"className="text text-center">Precio</th> 
@@ -19,8 +21,6 @@ const ListaProductoXCombo = ({productosXCombo, eliminarProductoXCombo}) =>(
                 <th scope="col" className="text text-center">Tipo</th> 
                 <th scope="col" className="text text-center">Calificacion</th> 
                 <th scope="col" className="text text-center">StockMin</th> 
-                <th scope="col" className="text text-center"></th> 
-                <th scope="col" className="text text-center"></th> 
                 <th scope="col" className="text text-center"></th> 
                 <th scope="col" className="text text-center"></th> 
                 <th scope="col" className="text text-center"></th> 

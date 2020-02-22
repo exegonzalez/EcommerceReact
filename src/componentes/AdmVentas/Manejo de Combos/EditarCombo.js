@@ -14,7 +14,7 @@ class EditarCombo extends Component {
     actualizarListado(){
         axios({
             "method" : "GET",
-            "url": "https://flask-ecommerce-mate.herokuapp.com/combo",
+            "url": "http://localhost:5000/combo",
           })
         .then((Response) => {
           const listacombos = Response.data
@@ -77,7 +77,7 @@ class EditarCombo extends Component {
 
     axios({
         "method" : "PUT",
-        "url": "https://flask-ecommerce-mate.herokuapp.com/combo",
+        "url": "http://localhost:5000/combo",
         "params": {
             "codigo": codigo,
             "nombre": nombre,

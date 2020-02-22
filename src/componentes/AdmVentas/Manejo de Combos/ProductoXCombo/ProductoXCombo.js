@@ -15,7 +15,7 @@ class ProductoXCombo extends Component{
     actualizarListado(){
       axios({
         "method" : "GET",
-        "url": "https://flask-ecommerce-mate.herokuapp.com/productoxcombo",
+        "url": "http://localhost:5000/productoxcombo",
         "params": {
             "codigo": this.props.codigoCombo
           }
@@ -87,7 +87,7 @@ class ProductoXCombo extends Component{
   eliminarProductoXCombo = codigo =>{
     axios({
       "method" : "DELETE",
-      "url": "https://flask-ecommerce-mate.herokuapp.com/productoxcombo",
+      "url": "http://localhost:5000/productoxcombo",
       "params": {
         "producto": codigo,
         "combo": this.props.codigoCombo

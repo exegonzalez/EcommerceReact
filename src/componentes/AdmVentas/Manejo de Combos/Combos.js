@@ -16,7 +16,7 @@ import {Redirect} from 'react-router-dom'
   actualizarListado(){
     axios({
       "method" : "GET",
-      "url": "https://flask-ecommerce-mate.herokuapp.com/combo",
+      "url": "http://localhost:5000/combo",
     })
     .then((Response) => {
       const listacombos = Response
@@ -84,7 +84,7 @@ import {Redirect} from 'react-router-dom'
   eliminarCombo = codigo =>{
     axios({
       "method" : "DELETE",
-      "url": "https://flask-ecommerce-mate.herokuapp.com/combo",
+      "url": "http://localhost:5000/combo",
       "params": {
         "codigo": codigo
       }

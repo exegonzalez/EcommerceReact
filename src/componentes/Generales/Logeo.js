@@ -34,7 +34,7 @@ firebase.initializeApp({
     buscarUsuario(){
       axios({
         "method" : "GET",
-        "url": "https://flask-ecommerce-mate.herokuapp.com/cuenta",
+        "url": "http://localhost:5000/cuenta",
         "params": {
             "email": firebase.auth().currentUser.email
           }
@@ -52,7 +52,7 @@ firebase.initializeApp({
     if(firebase.auth().currentUser.photoURL!==null){
       axios({
         "method" : "POST",
-        "url": "https://flask-ecommerce-mate.herokuapp.com/cuenta",
+        "url": "http://localhost:5000/cuenta",
         "params": {
             "email": firebase.auth().currentUser.email,
             "nombreuser": firebase.auth().currentUser.displayName,
@@ -67,7 +67,7 @@ firebase.initializeApp({
     }else{
       axios({
         "method" : "POST",
-        "url": "https://flask-ecommerce-mate.herokuapp.com/cuenta",
+        "url": "http://localhost:5000/cuenta",
         "params": {
             "email": firebase.auth().currentUser.email,
             "nombreuser": firebase.auth().currentUser.displayName,

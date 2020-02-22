@@ -44,7 +44,7 @@ import swal from 'sweetalert';
   
     axios({
         "method" : "PUT",
-        "url": "https://flask-ecommerce-mate.herokuapp.com/cuenta",
+        "url": "http://localhost:5000/cuenta",
         "params": {
             "nombre": this.state.cuenta[0].nombre,
             "apellido": this.state.cuenta[0].apellido,

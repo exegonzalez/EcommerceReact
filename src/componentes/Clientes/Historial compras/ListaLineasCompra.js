@@ -7,7 +7,7 @@ const ListaLineasCompra = ({lineas}) =>(
     
     <div align="center">            
         <br></br>
-          <div className="ventas">
+          <div className="ventas text-black-50">
             <table className="table table-striped table-hover table-condensed">
                 <thead className="thead-dark">
                     <tr> 

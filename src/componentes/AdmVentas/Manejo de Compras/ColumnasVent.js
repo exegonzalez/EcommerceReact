@@ -16,7 +16,7 @@ const ColumnasVent = ({venta,eliminarCompra})=> (
             <td></td>
             <td>
               <button type="button" className="btn btn-outline-danger"
-                onClick={()=> eliminarCompra(venta.codigo)}
+                onClick={()=> eliminarCompra(venta.carrito)}
                 >Eliminar 
               </button>
             </td>

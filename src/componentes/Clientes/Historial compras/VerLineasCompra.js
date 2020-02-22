@@ -13,7 +13,7 @@ class VerLineasCompra extends Component{
     actualizarListado(){
         axios({
           "method" : "GET",
-          "url": "https://flask-ecommerce-mate.herokuapp.com/linea",
+          "url": "http://localhost:5000/linea",
           "params": {
             "carrito": this.props.compra,
           }

@@ -57,7 +57,7 @@ class NuevoProducto extends Component {
         
         axios({
             "method" : "POST",
-            "url": "https://flask-ecommerce-mate.herokuapp.com/producto",
+            "url": "http://localhost:5000/producto",
             "params": {
                 "descripcion": descripcion,
                 "nombre": nombre,

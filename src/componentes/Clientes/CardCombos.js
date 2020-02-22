@@ -31,7 +31,7 @@ agregarCarrito = () => {
   if(Object.keys(this.props.usuario[0]).length !== 0){
     axios({
       "method" : "POST",
-      "url": "https://flask-ecommerce-mate.herokuapp.com/linea",
+      "url": "http://localhost:5000/linea",
       "params": {
           "cantidadproducto": 1,
           "totalproducto": this.props.combo.precio,

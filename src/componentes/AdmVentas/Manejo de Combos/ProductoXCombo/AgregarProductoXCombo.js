@@ -16,7 +16,7 @@ class AgregarProductoXCombo extends Component{
     actualizarListado(){
       axios({
         "method" : "GET",
-        "url": "https://flask-ecommerce-mate.herokuapp.com/producto"
+        "url": "http://localhost:5000/producto"
       })
       .then((Response) => {
         const listaproductos = Response
@@ -86,7 +86,7 @@ class AgregarProductoXCombo extends Component{
     console.log(codigo)
     axios({
       "method" : "POST",
-      "url": "https://flask-ecommerce-mate.herokuapp.com/productoxcombo",
+      "url": "http://localhost:5000/productoxcombo",
       "params": {
         "producto": codigo,
         "combo": this.props.codigoCombo

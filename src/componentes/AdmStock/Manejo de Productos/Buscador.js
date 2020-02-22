@@ -36,7 +36,7 @@ class Buscador extends Component {
       listadoBajoStock(){
         axios({
             "method" : "PATCH",
-            "url": "https://flask-ecommerce-mate.herokuapp.com/producto",
+            "url": "http://localhost:5000/producto",
           })
           .then((Response) => {
           const listaproductos = Response.data

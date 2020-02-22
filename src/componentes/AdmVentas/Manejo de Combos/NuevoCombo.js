@@ -51,7 +51,7 @@ class NuevoCombo extends Component {
     }
     axios({
         "method" : "POST",
-        "url": "https://flask-ecommerce-mate.herokuapp.com/combo",
+        "url": "http://localhost:5000/combo",
         "params": {
             "nombre": nombre,
             "precio": precio,

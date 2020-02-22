@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const ColumnasComp = ({compra})=> (
     
     <Fragment>         
-        <tr>
+        <tr className= "font-weight-bold  text-black-50 ">
             <td></td>
             <td></td>
             <td>{compra.codigo}</td>

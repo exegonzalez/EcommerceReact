@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const ColumnasAgregarProdXComb = ({producto,AgregarProductoXCombo})=> (
     
     <Fragment>         
-        <tr>
+        <tr className= "font-weight-bold  text-black-50 ">
             <td></td>
             <td>{producto.codigo}</td>
             <td>{producto.nombre}</td>
@@ -43,7 +43,6 @@ const ColumnasAgregarProdXComb = ({producto,AgregarProductoXCombo})=> (
                 </div>
                 </div>
             </td>
-            <td></td>
             <td></td>
         </tr>                           
     </Fragment>

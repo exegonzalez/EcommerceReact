@@ -16,7 +16,7 @@ class VerCombos extends Component {
   actualizarListado(){
     axios({
         "method" : "GET",
-        "url": "https://flask-ecommerce-mate.herokuapp.com/combo",
+        "url": "http://localhost:5000/combo",
       })
       .then((Response) => {
       const listacombos = Response.data
@@ -31,7 +31,7 @@ class VerCombos extends Component {
     agregarAlCarrito= () =>{
       axios({
         "method" : "POST",
-        "url": "https://flask-ecommerce-mate.herokuapp.com/linea",
+        "url": "http://localhost:5000/linea",
         "params": {
             "cantidadproducto": 1,
             "totalproducto": this.state.combo[0].precio,

@@ -13,7 +13,7 @@ class VerCompras extends Component{
     actualizarListado(){
       axios({
         "method" : "GET",
-        "url": "https://flask-ecommerce-mate.herokuapp.com/compra",
+        "url": "http://localhost:5000/compra",
       })
       .then((Response) => {
         const listacompras = Response

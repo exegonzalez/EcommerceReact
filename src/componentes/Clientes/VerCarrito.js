@@ -20,7 +20,7 @@ import swal from 'sweetalert';
         const carro = JSON.parse(localStorage.getItem('carrito'))
         axios({
           "method" : "GET",
-          "url": "https://flask-ecommerce-mate.herokuapp.com/linea",
+          "url": "http://localhost:5000/linea",
           "params": {
               "carrito": carro[0].carrito
           }
@@ -67,7 +67,7 @@ import swal from 'sweetalert';
       crearCompra(){
         axios({
           "method" : "POST",
-          "url": "https://flask-ecommerce-mate.herokuapp.com/compra",
+          "url": "http://localhost:5000/compra",
           "params": {
               "carrito": this.props.carrito[0].carrito,
               "total": this.state.total,
@@ -96,7 +96,7 @@ import swal from 'sweetalert';
       eliminarLinea = codigo =>{
         axios({
           "method" : "DELETE",
-          "url": "https://flask-ecommerce-mate.herokuapp.com/linea",
+          "url": "http://localhost:5000/linea",
           "params": {
             "codigo": codigo
           }

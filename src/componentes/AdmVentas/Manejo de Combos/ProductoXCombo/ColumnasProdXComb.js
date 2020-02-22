@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const ColumnasProdXComb = ({productoXCombo,eliminarProductoXCombo})=> (
     
     <Fragment>         
-        <tr>
+        <tr className= "font-weight-bold  text-black-50 ">
             <td></td>
             <td></td>
             <td>{productoXCombo.codigo}</td>
@@ -50,8 +50,6 @@ const ColumnasProdXComb = ({productoXCombo,eliminarProductoXCombo})=> (
                 </div>
                 </div>
             </td>
-            <td></td>
-            <td></td>
         </tr>                           
     </Fragment>
  )
